@@ -5,11 +5,17 @@ using UnityEngine;
 public class move : MonoBehaviour
 {
     public float speed=0.1f;
+    private Vector2 bounds;
+    private void Start()
+    {
 
-
+    }
 
     void Update()
     {
-        this.transform.position += new Vector3(1, 0, 0) * speed * Time.deltaTime;
+        this.transform.position += new Vector3(-1, 0, 0) * speed * Time.deltaTime;
+
     }
+    
+
 }
