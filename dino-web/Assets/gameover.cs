@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class dead : MonoBehaviour
+public class gameover : MonoBehaviour
 {
+    public GameObject g;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +19,10 @@ public class dead : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log(collision.gameObject.tag);
+        Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "enemy")
         {
-            Destroy(collision.gameObject);
+            g.SetActive(true);
         }
 
     }
